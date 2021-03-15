@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace CokeAHP
 {
-    public sealed class config : IConfig
+    public sealed class Config : IConfig
     {
         [Description("Is the plugin enabled?")]
         public bool IsEnabled { get; set; } = true;

@@ -3,12 +3,18 @@
     using Exiled.API.Enums;
     using Exiled.API.Features;
     using HarmonyLib;
+    using System;
 
-    public sealed class CokeAHP : Plugin<config>
+    public sealed class CokeAHP : Plugin<Config>
     {
-        public override string Prefix => "ItemAHP";
-        public override string Name => "ItemAHP";
-        public override string Author => "Parkeymon";
+
+        public override string Author { get; } = "Parkeymon";
+        public override string Name { get; } = "ItemAHP";
+        public override string Prefix { get; } = "ItemAHP";
+        public override Version Version { get; } = new Version(1, 2, 0);
+        public override Version RequiredExiledVersion { get; } = new Version(2, 1, 8, 0);
+
+
 
 
         private static readonly Harmony HarmonyInstance = new Harmony(nameof(CokeAHP).ToLowerInvariant());

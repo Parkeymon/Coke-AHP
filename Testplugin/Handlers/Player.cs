@@ -24,19 +24,19 @@ namespace CokeAHP
                 switch (ev.Item)
                 {
                     case ItemType.SCP207:
-                        ev.Player.AdrenalineHealth += (int)Instance.Config.Scp207AHP;
+                        ev.Player.ArtificialHealth += (int)Instance.Config.Scp207AHP;
                         break;
                     case ItemType.SCP500:
-                        ev.Player.AdrenalineHealth += (int)Instance.Config.Scp500AHP;
+                        ev.Player.ArtificialHealth += (int)Instance.Config.Scp500AHP;
                         break;
                     case ItemType.Adrenaline:
-                        ev.Player.AdrenalineHealth += (int)Instance.Config.AdrenalineAHP - 30;
+                        ev.Player.ArtificialHealth = (int)Instance.Config.AdrenalineAHP;
                         break;
                     case ItemType.Medkit:
-                        ev.Player.AdrenalineHealth += (int)Instance.Config.MedKitAHP;
+                        ev.Player.ArtificialHealth += (int)Instance.Config.MedKitAHP;
                         break;
                     case ItemType.Painkillers:
-                        ev.Player.AdrenalineHealth += (int)Instance.Config.PainKillerAHP;
+                        ev.Player.ArtificialHealth += (int)Instance.Config.PainKillerAHP;
                         break;
                 }
             }
